@@ -60,11 +60,6 @@ function cognomeFunction (cognome){ //popoliamo il map
 
 //PUNTO 4
 var nome = ['L', 'E', 'A'];
-var FullName = nome.push(' ','V', 'A','I','A','N','A');
-console.log(nome);
-
-//otra opzion podría ser esta. pero el resultado es diferente
-var nome = ['L', 'E', 'A'];
 var surname = ['V','A','I','A','N','A'];
-var FullName = nome.push(surname);
-console.log(nome); 
+var FullName = nome.push(...surname);
+console.log(nome);
