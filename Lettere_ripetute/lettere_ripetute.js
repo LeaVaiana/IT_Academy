@@ -18,10 +18,12 @@ var nomecognome= ["L","E","A","V","A","I","A","N","A"];
 var vocali= ["A","E","I","O","U"];
 
 for (var i=0; i < nomecognome.length; i ++){              //mi scorre la stringa nomecognome
-    if (vocali.indexOf(nomecognome[i]) === -1) {         //vedo se nella stringa vocali è contenuto (nomecognome[i])
-        console.log("é una consonante");
+    if (vocali.indexOf(nomecognome[i]) != -1) {         //vedo se nella stringa vocali è contenuto (nomecognome[i])
+        console.log(nomecognome[i]+" é una vocale");
+    }else if (typeof nomecognome[i] === 'number'){
+        console.log(nomecognome[i]+" è un numero");
     }else{
-        console.log("é una vocale");
+        console.log(nomecognome[i]+" é una consonante");
     }
 }
 
