@@ -20,16 +20,16 @@ var nomecognome= ["L","E","A","V","a","I","A","N","A",6];
 var vocali= ["A","E","I","O","U"];
 
 for (var i = 0; i < nomecognome.length; i++) { 
-    printLetter(nomecognome, i);
+    printLetter(nomecognome[i]);
 }
 
-function printLetter(arr, i) {
-    if (typeof arr[i] === 'number') {
-        console.log(arr[i] + " è un numero");
-    }else if (vocali.indexOf(arr[i].toUpperCase()) != -1) {
-        console.log(arr[i] + " é una vocale");
+function printLetter(letter) {
+    if (typeof letter === 'number') {
+        console.log(letter + " è un numero");
+    }else if (vocali.indexOf(letter.toUpperCase()) != -1) {
+        console.log(letter + " é una vocale");
     }else {
-        console.log(arr[i] + " é una consonante");
+        console.log(letter + " é una consonante");
     }
 }
 
