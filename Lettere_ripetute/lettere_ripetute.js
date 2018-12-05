@@ -1,4 +1,4 @@
-alert ("ciao");
+alert ("ciao IT Academy!!!");
 
 //PUNTO 1 Creare un array con il tuo nome e cognome, dove ogni posizione corrisponde a una lettera
 //with FOR loop
@@ -12,34 +12,27 @@ nomecognome.forEach(function(lettera){
     console.log("nome e cognome: " + nomecognome)
 });
 
-// PUNTO 2 Per ogni lettera della stringa se è una vocale, stampare "è una vocale", altrimenti è una "consonante"
+// PUNTO 2 Per ogni lettera della stringa se è una vocale, stampare "è una vocale", altrimenti è una "consonante", se trovi un numero: è un numero
 //opz 1 FOR loop
-var nomecognome= ["L","E","A","V","A","I","A","N","A"];
+
+
+var nomecognome= ["L","E","A","V","a","I","A","N","A",6];
 var vocali= ["A","E","I","O","U"];
 
-for (var i=0; i < nomecognome.length; i ++){              //mi scorre la stringa nomecognome
-    if (vocali.indexOf(nomecognome[i]) != -1) {         //vedo se nella stringa vocali è contenuto (nomecognome[i])
-        console.log(nomecognome[i]+" é una vocale");
-    }else if (typeof nomecognome[i] === 'number'){
-        console.log(nomecognome[i]+" è un numero");
-    }else{
-        console.log(nomecognome[i]+" é una consonante");
+for (var i = 0; i < nomecognome.length; i++) { 
+    printLetter(nomecognome, i);
+}
+
+function printLetter(arr, i) {
+    if (typeof arr[i] === 'number') {
+        console.log(arr[i] + " è un numero");
+    }else if (vocali.indexOf(arr[i].toUpperCase()) != -1) {
+        console.log(arr[i] + " é una vocale");
+    }else {
+        console.log(arr[i] + " é una consonante");
     }
 }
 
-//opz 2 WHILE
-var nomecognome= ["L","E","A","V","A","I","A","N","A"];
-var vocali= ["A","E","I","O","U"];
-var i=0; 
-
-while (i< nomecognome.length) {
-    if (vocali.indexOf(nomecognome[i]) === -1) {         
-        console.log("é una consonante");
-    }else{
-        console.log("é una vocale");
-    }
-    i++;
-}
 
 //PUNTO 3: Immagazzina le lettere dell'array cognome e conta il numero di volte che appaiono
 
