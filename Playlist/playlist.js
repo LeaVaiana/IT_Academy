@@ -7,6 +7,8 @@ function addSongs(){
     song1.innerHTML = "November rain"; //assegno un nuovo valore 
     song2.innerHTML = "Dreams";
     song3.innerHTML = "Patience";
+    song1.setAttribute("class","redtext")//cambio un attributo, mediante la classe redtext definita nell'HTML
+
 }
 
 window.onload=addSongs //funzione callback, quando sará avvenuto l'evento verrá chiamata la funzione
